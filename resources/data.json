@@ -1,3 +1,39 @@
 {
-  
+  "levels": [
+    {
+      "id": 1,
+      "numberOfAsteroids": 20,
+      "asteroidHp": 5
+    },
+    {
+      "id": 2,
+      "numberOfAsteroids": 30,
+      "asteroidHp": 5
+    },
+    {
+      "id": 3,
+      "numberOfAsteroids": 30,
+      "asteroidHp": 5
+    },
+    {
+      "id": 4,
+      "numberOfAsteroids": 40,
+      "asteroidHp": 5
+    },
+    {
+      "id": 5,
+      "numberOfAsteroids": 50,
+      "asteroidHp": 10
+    },
+    {
+      "id": 6,
+      "numberOfAsteroids": 60,
+      "asteroidHp": 10
+    },
+    {
+      "id": 7,
+      "numberOfAsteroids": 70,
+      "asteroidHp": 10
+    }
+  ]
 }

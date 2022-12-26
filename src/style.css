@@ -22,12 +22,6 @@ body {
     width: 100%;
 }
 
-#pauseButton {
-    padding: 10px;
-    background: grey;
-    font-size: x-large;
-}
-
 #gameCanvas {
     position: absolute;
     width: 100%;
