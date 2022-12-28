@@ -38,7 +38,7 @@ class Bullet {
     checkCollision(enemies) {
         let hitDetected = false
         for (let i = 0; i < enemies.length; i++) {
-            if (this.x >= enemies[i].x
+            if (this.x >= enemies[i].x - 10
                 && this.x <= enemies[i].x + enemies[i].image.width * enemies[i].scale
                 && this.y <= enemies[i].y + enemies[i].image.height * enemies[i].scale
             ) {
