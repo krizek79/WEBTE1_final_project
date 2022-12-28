@@ -3,12 +3,19 @@ class Monkey {
     constructor() {
         this.image = new Image()
         this.image.src = "../resources/images/monkey.png"
-        this.scale = 0.12
-        this.ya = (Math.random() * (80 - 30) + 30) / 100
-        this.xa = (Math.random() * (100 + 100) - 100) / 100
     }
 
     init(canvas) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            this.scale = 0.3
+            this.ya = (Math.random() * (200 - 100) + 100) / 100
+            this.xa = (Math.random() * (100 + 100) - 100) / 100
+        } else {
+            this.scale = 0.12
+            this.ya = (Math.random() * (80 - 30) + 30) / 100
+            this.xa = (Math.random() * (100 + 100) - 100) / 100
+        }
+
         this.image.onload = () => {
             let xMax = canvas.width - this.image.width * this.scale
             let xMin = 1  + this.image.width * this.scale

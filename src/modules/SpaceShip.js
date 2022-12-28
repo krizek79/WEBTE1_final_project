@@ -4,11 +4,16 @@ class SpaceShip {
         this.image = new Image()
         this.image.src = "../resources/images/spaceShip.png"
         this.isDraggable = false
-        this.scale = 5.5
         this.isShooting = false
     }
 
     init(canvas) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            this.scale = 12
+        } else {
+            this.scale = 5.5
+        }
+
         this.image.onload = () => {
             this.x = (canvas.width / 2) - ((this.image.width * this.scale) / 2)
             this.y = canvas.height - ((this.image.height * this.scale) + 50)
