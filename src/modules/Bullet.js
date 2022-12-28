@@ -1,13 +1,14 @@
 class Bullet {
 
-    constructor(props) {
+    constructor(x, y) {
         this.image = new Image()
         this.image.src = "../resources/images/bullet.png"
         this.scale = 3
-        this.x = props.x
-        this.y = props.y
+        this.x = x
+        this.y = y
         this.ya = 2
         this.damage = 1
+        this.fireRate = 2
     }
 
     draw(context) {

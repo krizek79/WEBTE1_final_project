@@ -53,5 +53,39 @@ class SpaceShip {
             this.isShooting = false
             canvas.style.cursor = "default"
         }
+
+        canvas.ontouchstart = e => {
+            let touchX = e.touches[0].clientX
+            let touchY = e.touches[0].clientY
+
+            if (touchX >= this.x + ((this.image.width * this.scale) / 2) - (this.image.width * 2) &&
+                touchX <= this.x + ((this.image.width * this.scale) / 2) + (this.image.width * 2) &&
+                touchY >= this.y &&
+                touchY <= this.y + ((this.image.height * this.scale))
+            ) {
+                this.isDraggable = true
+                this.isShooting = true
+            }
+        }
+
+        canvas.ontouchmove = e => {
+            let touchX = e.touches[0].clientX
+            let touchY = e.touches[0].clientY
+
+            if (this.isDraggable) {
+                this.x = touchX - ((this.image.width * this.scale) / 2)
+                this.y = touchY - ((this.image.height * this.scale) - 25)
+            }
+        }
+
+        canvas.ontouchend = () => {
+            this.isDraggable = false
+            this.isShooting = false
+        }
+
+        canvas.ontouchcancel = () => {
+            this.isDraggable = false
+            this.isShooting = false
+        }
     }
 }
