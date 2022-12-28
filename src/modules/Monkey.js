@@ -3,6 +3,7 @@ class Monkey {
     constructor() {
         this.image = new Image()
         this.image.src = "../resources/images/monkey.png"
+        this.healthPoints = 2
     }
 
     init(canvas) {

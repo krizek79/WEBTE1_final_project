@@ -6,8 +6,9 @@ class Bullet {
         this.image.src = "../resources/images/bullet.png"
         this.x = x
         this.y = y
-        this.ya = 2
+        this.ya = 3
         this.fireRate = 20
+        this.damage = 1
     }
 
     init() {
@@ -32,5 +33,19 @@ class Bullet {
 
     updatePosition() {
         this.y -= this.ya
+    }
+
+    checkCollision(enemies) {
+        let hitDetected = false
+        for (let i = 0; i < enemies.length; i++) {
+            if (this.x >= enemies[i].x
+                && this.x <= enemies[i].x + enemies[i].image.width * enemies[i].scale
+                && this.y <= enemies[i].y + enemies[i].image.height * enemies[i].scale
+            ) {
+                hitDetected = true
+                enemies[i].healthPoints -= this.damage
+            }
+        }
+        return hitDetected
     }
 }

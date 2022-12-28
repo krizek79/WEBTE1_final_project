@@ -49,6 +49,10 @@ class Level {
                 if (this.bullets[i].y <= 0) {
                     this.bullets.splice(i, 1)
                 }
+                // Detect collision with enemies
+                if (this.bullets.length !== 0 && this.bullets[i].checkCollision(this.enemies)) {
+                    this.bullets.splice(i, 1)
+                }
             }
 
             // Enemies
@@ -58,6 +62,11 @@ class Level {
 
                 // Remove enemies past bottom bound
                 if (this.enemies[i].y >= this.canvas.height) {
+                    this.enemies.splice(i, 1)
+                }
+
+                // Check enemy hp
+                if (this.enemies[i].healthPoints <= 0) {
                     this.enemies.splice(i, 1)
                 }
             }
