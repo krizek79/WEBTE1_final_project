@@ -1,4 +1,4 @@
-class Monkey {
+class Enemy {
 
     constructor() {
         this.image = new Image()

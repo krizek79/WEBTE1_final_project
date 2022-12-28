@@ -14,7 +14,7 @@ class Level {
 
         this.spaceShip.init(this.canvas)
         for (let i = 0; i < 10; i++) {
-            this.enemies.push(new Monkey())
+            this.enemies.push(new Enemy())
             this.enemies[i].init(this.canvas)
         }
     }
