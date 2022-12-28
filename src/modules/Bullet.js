@@ -6,15 +6,15 @@ class Bullet {
         this.image.src = "../resources/images/bullet.png"
         this.x = x
         this.y = y
-        this.ya = 3
-        this.fireRate = 20
+        this.ya = 5
+        this.fireRate = 30
         this.damage = 1
     }
 
     init() {
         this.image.onload = () => {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                this.scale = 6
+                this.scale = 4
                 this.xOffset = 48
                 this.yOffset = 80
             } else {

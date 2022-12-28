@@ -5,6 +5,7 @@ class SpaceShip {
         this.image.src = "../resources/images/spaceShip.png"
         this.isDraggable = false
         this.isShooting = false
+        this.nextShotIn = 0
     }
 
     init(canvas) {
