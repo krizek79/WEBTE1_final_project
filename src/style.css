@@ -27,3 +27,70 @@ body {
     position: absolute;
     margin: 0 auto;
 }
+
+#gameStart, #gameOver {
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+#gameStart a, #gameOver a {
+    border:3px solid #7f7;
+    color: #7f7;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 170px;
+    text-align: center;
+    font-size: 20px;
+    display: inline-block;
+}
+#gameStart a:hover, #gameOver a:hover{
+    background-color: #7f7;
+    color: #fff;
+}
+h1{
+    color: red;
+    font-size: 35px;
+
+}
+@media only screen and (max-width: 600px) {
+    #gameStart, #gameOver {
+        padding: 20px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        height: 200px;
+        width: 200px;
+        text-align: center;
+    }
+    #gameStart a, #gameOver a {
+        border:3px solid #7f7;
+        color: #7f7;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        display: block;
+        width: 170px;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+    }
+    #gameStart a:hover, #gameOver a:hover{
+        background-color: #7f7;
+        color: #fff;
+    }
+    h1{
+        color: red;
+        font-size: 35px;
+    
+    }
+  }

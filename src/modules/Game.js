@@ -79,15 +79,13 @@ class Game {
 
                 // Remove enemies past bottom bound and restart current level
                 if (this.enemies[i].y >= this.canvas.height) {
-                    this.enemies.splice(0, this.enemies.length)
-                    this.init()
-                    continue
+                    this.enemies.splice(i, 1)
+                    gameOver()
                 }
 
                 // Check enemy hp
                 if (this.enemies[i].healthPoints <= 0) {
                     this.enemies.splice(i, 1)
-
                     // Vibration on mobile after kill
                     window.navigator.vibrate(10)
                 }
