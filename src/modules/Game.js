@@ -1,35 +1,41 @@
-class Level {
+class Game {
 
     constructor(props) {
         this.element = props.element
         this.canvas = props.canvas
         this.context = this.canvas.getContext("2d")
-        this.spaceShip = new SpaceShip()
+        this.levels = props.levels
+        this.spaceShip = null
         this.enemies = []
         this.bullets = []
+        this.currentLevelIndex = props.currentLevelIndex
+        this.ui = null
     }
 
     init() {
-        //orientation detect
-        window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
-            const portrait = e.matches;
-        if (portrait){
-            alert("jeeije");
-        } else {
-            alert("obrat sa");
-        }
-        });
-        this.startGameLoop()
+        this.ui = null
+        this.spaceShip = null
 
+        this.currentLevel = this.levels[this.currentLevelIndex]
+
+        this.spaceShip = new SpaceShip()
         this.spaceShip.init(this.canvas)
-        for (let i = 0; i < 10; i++) {
-            this.enemies.push(new Enemy())
+
+        for (let i = 0; i < this.currentLevel.numberOfEnemies; i++) {
+            this.enemies.push(new Enemy(this.currentLevel))
             this.enemies[i].init(this.canvas)
         }
+
+        this.ui = new Ui(this)
+    }
+
+    spawnEnemies() {
+        // TODO
     }
 
     startGameLoop() {
         const step = () => {
+            // Resize canvas if is window resized
             window.addEventListener('resize', () => {
                 this.canvas.width = window.innerWidth
                 this.canvas.height = window.innerHeight
@@ -57,10 +63,11 @@ class Level {
                 // Remove bullets past top bound
                 if (this.bullets[i].y <= 0) {
                     this.bullets.splice(i, 1)
+                    continue
                 }
 
                 // Detect collision with enemies
-                if (this.bullets.length !== 0 && this.bullets[i].checkCollision(this.enemies)) {
+                if (this.bullets[i].checkCollision(this.enemies)) {
                     this.bullets.splice(i, 1)
                 }
             }
@@ -70,19 +77,26 @@ class Level {
                 this.enemies[i].updatePosition(this.canvas)
                 this.enemies[i].draw(this.context)
 
-                // Remove enemies past bottom bound
+                // Remove enemies past bottom bound and restart current level
                 if (this.enemies[i].y >= this.canvas.height) {
-                    this.enemies.splice(i, 1)
+                    this.enemies.splice(0, this.enemies.length)
+                    this.init()
+                    continue
                 }
 
                 // Check enemy hp
-                if (this.enemies.length !== 0 && this.enemies[i].healthPoints <= 0) {
-                    this.enemies.splice(i, 1);
-                    //after kill vibrate
-                    window.navigator.vibrate(100); 
-                    console.log("vibrate");
+                if (this.enemies[i].healthPoints <= 0) {
+                    this.enemies.splice(i, 1)
+
+                    // Vibration on mobile after kill
+                    window.navigator.vibrate(10)
                 }
             }
+
+            // UI
+            this.ui.drawCurrentLevelHeader(this.currentLevel.id)
+            this.ui.drawNumberOfEnemies(this.enemies.length)
+            this.ui.drawPauseButton()
 
             // Update for weapon fireRate
             if (this.spaceShip.nextShotIn > 0) {

@@ -1,64 +1,62 @@
-{
-  "levels": [
-    {
-      "id": 1,
-      "numberOfEnemies": 20,
-      "numberOfWaves": 4,
-      "enemyHp": 5
-    },
-    {
-      "id": 2,
-      "numberOfEnemies": 30,
-      "numberOfWaves": 4,
-      "enemyHp": 5
-    },
-    {
-      "id": 3,
-      "numberOfEnemies": 40,
-      "numberOfWaves": 4,
-      "enemyHp": 10
-    },
-    {
-      "id": 4,
-      "numberOfEnemies": 50,
-      "numberOfWaves": 5,
-      "enemyHp": 15
-    },
-    {
-      "id": 5,
-      "numberOfEnemies": 72,
-      "numberOfWaves": 6,
-      "enemyHp": 15
-    },
-    {
-      "id": 6,
-      "numberOfEnemies": 90,
-      "numberOfWaves": 9,
-      "enemyHp": 20
-    },
-    {
-      "id": 7,
-      "numberOfEnemies": 120,
-      "numberOfWaves": 12,
-      "enemyHp": 20
-    },
-    {
-      "id": 8,
-      "numberOfEnemies": 120,
-      "numberOfWaves": 8,
-      "enemyHp": 20
-    },
-    {
-      "id": 9,
-      "numberOfEnemies": 150,
-      "numberOfWaves": 10,
-      "enemyHp": 40
-    },
-    {
-      "id": 10,
-      "numberOfEnemies": 200,
-      "numberOfWaves": 10,
-      "enemyHp": 50
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "numberOfEnemies": 20,
+    "numberOfWaves": 4,
+    "enemyHp": 3
+  },
+  {
+    "id": 2,
+    "numberOfEnemies": 30,
+    "numberOfWaves": 4,
+    "enemyHp": 5
+  },
+  {
+    "id": 3,
+    "numberOfEnemies": 40,
+    "numberOfWaves": 4,
+    "enemyHp": 10
+  },
+  {
+    "id": 4,
+    "numberOfEnemies": 50,
+    "numberOfWaves": 5,
+    "enemyHp": 15
+  },
+  {
+    "id": 5,
+    "numberOfEnemies": 72,
+    "numberOfWaves": 6,
+    "enemyHp": 15
+  },
+  {
+    "id": 6,
+    "numberOfEnemies": 90,
+    "numberOfWaves": 9,
+    "enemyHp": 20
+  },
+  {
+    "id": 7,
+    "numberOfEnemies": 120,
+    "numberOfWaves": 12,
+    "enemyHp": 20
+  },
+  {
+    "id": 8,
+    "numberOfEnemies": 120,
+    "numberOfWaves": 8,
+    "enemyHp": 20
+  },
+  {
+    "id": 9,
+    "numberOfEnemies": 150,
+    "numberOfWaves": 10,
+    "enemyHp": 40
+  },
+  {
+    "id": 10,
+    "numberOfEnemies": 200,
+    "numberOfWaves": 10,
+    "enemyHp": 50
+  }
+]

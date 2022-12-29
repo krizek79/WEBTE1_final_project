@@ -10,7 +10,12 @@ class SpaceShip {
 
     init(canvas) {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            this.scale = 12
+            // Detection of mobile orientation
+            if (window.matchMedia("(orientation:portrait)").matches) {
+                this.scale = 12
+            } else {
+                this.scale = 4
+            }
         } else {
             this.scale = 5.5
         }

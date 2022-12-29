@@ -14,13 +14,23 @@ class Bullet {
     init() {
         this.image.onload = () => {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                this.scale = 4
-                this.xOffset = 48
-                this.yOffset = 80
+                // Detection of mobile orientation
+                if (window.matchMedia("(orientation:portrait)").matches) {
+                    this.scale = 4
+                    this.xOffset = 32
+                    this.yOffset = 50
+                    this.enemyXOffset = 10
+                } else {
+                    this.scale = 2
+                    this.xOffset = 16
+                    this.yOffset = 20
+                    this.enemyXOffset = 15
+                }
             } else {
                 this.scale = 2
                 this.xOffset = 16
                 this.yOffset = 25
+                this.enemyXOffset = 10
             }
             this.x = this.x + (this.spaceShip.image.width * this.spaceShip.scale) / 2 - this.xOffset
             this.y -= this.yOffset
@@ -38,7 +48,7 @@ class Bullet {
     checkCollision(enemies) {
         let hitDetected = false
         for (let i = 0; i < enemies.length; i++) {
-            if (this.x >= enemies[i].x - 10
+            if (this.x >= enemies[i].x - this.enemyXOffset
                 && this.x <= enemies[i].x + enemies[i].image.width * enemies[i].scale
                 && this.y <= enemies[i].y + enemies[i].image.height * enemies[i].scale
             ) {
