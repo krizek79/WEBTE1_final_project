@@ -81,6 +81,7 @@ class Game {
                 if (this.enemies[i].y >= this.canvas.height) {
                     this.enemies.splice(i, 1)
                     gameOver()
+                    continue
                 }
 
                 // Check enemy hp
