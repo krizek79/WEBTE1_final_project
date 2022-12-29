@@ -10,6 +10,15 @@ class Level {
     }
 
     init() {
+        //orientation detect
+        window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
+            const portrait = e.matches;
+        if (portrait){
+            alert("jeeije");
+        } else {
+            alert("obrat sa");
+        }
+        });
         this.startGameLoop()
 
         this.spaceShip.init(this.canvas)
@@ -68,7 +77,10 @@ class Level {
 
                 // Check enemy hp
                 if (this.enemies.length !== 0 && this.enemies[i].healthPoints <= 0) {
-                    this.enemies.splice(i, 1)
+                    this.enemies.splice(i, 1);
+                    //after kill vibrate
+                    window.navigator.vibrate(100); 
+                    console.log("vibrate");
                 }
             }
 
