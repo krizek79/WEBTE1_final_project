@@ -62,6 +62,7 @@ class Level {
                 // Detect collision with enemies
                 if (this.bullets.length !== 0 && this.bullets[i].checkCollision(this.enemies)) {
                     this.bullets.splice(i, 1)
+                   
                 }
             }
 
@@ -69,17 +70,19 @@ class Level {
             for (let i = 0; i < this.enemies.length; i++) {
                 this.enemies[i].updatePosition(this.canvas)
                 this.enemies[i].draw(this.context)
+                
 
                 // Remove enemies past bottom bound
                 if (this.enemies[i].y >= this.canvas.height) {
                     this.enemies.splice(i, 1)
+                    gameOver();
                 }
 
                 // Check enemy hp
                 if (this.enemies.length !== 0 && this.enemies[i].healthPoints <= 0) {
                     this.enemies.splice(i, 1);
                     //after kill vibrate
-                    window.navigator.vibrate(100); 
+                    window.navigator.vibrate(300); 
                     console.log("vibrate");
                 }
             }
