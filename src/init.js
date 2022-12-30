@@ -6,6 +6,7 @@ async function fetchData() {
 }
 
 async function startGame() {
+    game = null
     let startDiv = document.getElementById("gameStart")
     let gameOver = document.getElementById("gameOver")
     let gameCanvas = document.getElementById("gameCanvas")

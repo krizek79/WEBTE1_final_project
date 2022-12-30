@@ -39,8 +39,10 @@ class Bullet {
         context.drawImage(this.image, this.x, this.y, this.image.width * this.scale, this.image.height * this.scale)
     }
 
-    updatePosition() {
-        this.y -= this.ya
+    updatePosition(isGamePaused) {
+        if (!isGamePaused) {
+            this.y -= this.ya
+        }
     }
 
     checkCollision(enemies) {
@@ -49,6 +51,7 @@ class Bullet {
             if (this.x >= enemies[i].x - this.enemyXOffset
                 && this.x <= enemies[i].x + enemies[i].image.width * enemies[i].scale
                 && this.y <= enemies[i].y + enemies[i].image.height * enemies[i].scale
+                && this.y >= enemies[i].y
             ) {
                 hitDetected = true
                 enemies[i].healthPoints -= this.spaceShip.damage

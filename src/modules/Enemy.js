@@ -36,12 +36,13 @@ class Enemy {
         context.drawImage(this.image, this.x, this.y, this.image.width * this.scale, this.image.height * this.scale)
     }
 
-    updatePosition(canvas) {
+    updatePosition(canvas, context, isGamePaused) {
         if (this.x <= 0 || this.x + this.image.width * this.scale >= canvas.width) {
             this.xa *= -1
         }
-
-        this.y += this.ya
-        this.x += this.xa
+        if (!isGamePaused) {
+            this.y += this.ya
+            this.x += this.xa
+        }
     }
 }

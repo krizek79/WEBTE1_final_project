@@ -32,12 +32,13 @@ class SpaceShip {
         context.drawImage(this.image, this.x, this.y, this.image.width * this.scale, this.image.height * this.scale)
     }
 
-    updatePosition(canvas) {
+    updatePosition(canvas, isGamePaused) {
         canvas.onmousedown = e => {
             let mouseX = e.pageX
             let mouseY = e.pageY
 
-            if (mouseX >= this.x + ((this.image.width * this.scale) / 2) - (this.image.width * 2) &&
+            if (!isGamePaused &&
+                mouseX >= this.x + ((this.image.width * this.scale) / 2) - (this.image.width * 2) &&
                 mouseX <= this.x + ((this.image.width * this.scale) / 2) + (this.image.width * 2) &&
                 mouseY >= this.y &&
                 mouseY <= this.y + ((this.image.height * this.scale))
@@ -71,7 +72,8 @@ class SpaceShip {
             let touchX = e.touches[0].clientX
             let touchY = e.touches[0].clientY
 
-            if (touchX >= this.x + ((this.image.width * this.scale) / 2) - (this.image.width * 2) &&
+            if (!isGamePaused &&
+                touchX >= this.x + ((this.image.width * this.scale) / 2) - (this.image.width * 2) &&
                 touchX <= this.x + ((this.image.width * this.scale) / 2) + (this.image.width * 2) &&
                 touchY >= this.y &&
                 touchY <= this.y + ((this.image.height * this.scale))
