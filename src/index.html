@@ -15,12 +15,29 @@
     </div>
     <div id="gameStart" style="display: block;">
         <a href="#" onclick="startGame()">Start Game</a>
-        <a href="#">Manual</a>
+        <a href="#" onclick="openManual()">Manual</a>
         <a href="#">Credits</a>
     </div>
     <div id="gameOver" style="display: none;">
         <h1>Game Over</h1>
         <a href="#" onclick="startGame()">Play Again</a>
+    </div>
+    <div id="manual" style="display: none;">
+        <h1>Game manual</h1>
+        <a href="#" class="closeBtn" onclick="closeManual()">&times;</a>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima quasi saepe totam. 
+            Optio inventore iusto eligendi eum unde, odio totam officiis quis omnis. Quaerat amet ex similique rem?
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint amet officiis dignissimos vitae,
+            neque ut quaerat! Quas saepe, vel excepturi a ullam sed ad quaerat deserunt deleniti explicabo esse doloribus.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint amet officiis dignissimos vitae,
+            neque ut quaerat! Quas saepe, vel excepturi a ullam sed ad quaerat deserunt deleniti explicabo esse doloribus.
+        </p>
+        <button onclick="printManual()">Print this page</button>
     </div>
     <script src="modules/Game.js"></script>
     <script src="modules/SpaceShip.js"></script>

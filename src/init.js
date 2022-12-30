@@ -36,3 +36,22 @@ function gameOver(){
     gameCanvas.style.display = "none"
     gameOver.style.display = "block"
 }
+function openManual(){
+    let manualDiv = document.getElementById("manual");
+    manualDiv.style.display = "block";
+}
+function closeManual(){
+    let manualDiv = document.getElementById("manual");
+    manualDiv.style.display = "none";
+}
+function printManual(){
+    let manualDiv = document.getElementById("manual");
+    var divContents = document.getElementById("manual").innerHTML;
+    var a = window.open('', '', 'height=500, width=500');
+    a.document.write('<html>');
+    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender Ultra Luxury first edition pimpilimpi TopG<br>');
+    a.document.write(divContents);
+    a.document.write('</body></html>');
+    a.document.close();
+    a.print();
+}

@@ -59,12 +59,75 @@ h1{
     font-size: 35px;
 
 }
-@media only screen and (max-width: 600px) {
+
+@media (min-width: 600px) {
     #gameStart, #gameOver {
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 33%;
+        margin-top: -100px;
+        margin-left: -100px;
+        height: 200px;
+        width: 400px;
+        text-align: center;
+    }
+    #gameStart a, #gameOver a {
+        border:3px solid #7f7;
+        color: #7f7;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 500px;
+        text-align: center;
+        font-size: 75px;
+        display: inline-block;
+    }
+    #gameStart a:hover, #gameOver a:hover{
+        background-color: #7f7;
+        color: #fff;
+    }
+    h1{
+        color: red;
+        font-size: 35px;
+    }
+    #manual{
+        position: absolute;
+        background: #fff;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+        height: 60%;
+      }
+      #manual h1{
+        text-align: center;
+      }
+      #manual p, button{
+        padding: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 25px;
+      }
+      #manual h1{
+        font-size: 40px;
+      }
+    .closeBtn {
+        text-decoration: none;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+  }
+
+@media (max-resolution: 1dppx) {
+    #gameStart, #gameOver {
+        padding: 20px;
+        position: fixed;
+        top: 50%;
+        left: 45%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -77,9 +140,9 @@ h1{
         text-decoration: none;
         padding: 10px;
         cursor: pointer;
-        width: 170px;
+        width: 300px;
         text-align: center;
-        font-size: 20px;
+        font-size: 50px;
         display: inline-block;
     }
     #gameStart a:hover, #gameOver a:hover{
@@ -91,4 +154,33 @@ h1{
         font-size: 35px;
     
     }
-  }
+    #manual{
+        position: absolute;
+        background: #fff;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 10%;
+        height: 500px;
+      }
+      #manual h1{
+        text-align: center;
+      }
+      #manual p, button{
+        padding: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 15px;
+      }
+    .closeBtn {
+        text-decoration: none;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    button {
+        float: right;
+    }
+}
