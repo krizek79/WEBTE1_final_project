@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defender</title>
+    <link rel="icon" type="image/x-icon" href="../resources/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!--    <link rel="manifest" href="manifest.webmanifest">-->
+</head>
+<body>
+    <div id="mainFrame">
+        <div id="gameContainer">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+    <div id="gameStart" style="display: block;">
+        <a href="#" onclick="startGame()">Start Game</a>
+        <a href="#">Manual</a>
+        <a href="#">Credits</a>
+    </div>
+    <div id="gameOver" style="display: none;">
+        <h1>Game Over</h1>
+        <a href="#" onclick="startGame()">Play Again</a>
+    </div>
+    <script src="modules/Game.js"></script>
+    <script src="modules/SpaceShip.js"></script>
+    <script src="modules/Bullet.js"></script>
+    <script src="modules/Enemy.js"></script>
+    <script src="modules/Ui.js"></script>
+    <script src="init.js"></script>
+</body>
+</html>
