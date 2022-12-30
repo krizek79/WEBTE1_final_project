@@ -6,6 +6,8 @@ class SpaceShip {
         this.isDraggable = false
         this.isShooting = false
         this.nextShotIn = 0
+        this.fireRate = 25
+        this.damage = 1
     }
 
     init(canvas) {
@@ -97,6 +99,14 @@ class SpaceShip {
         canvas.ontouchcancel = () => {
             this.isDraggable = false
             this.isShooting = false
+        }
+    }
+
+    upgradeShip(damageGrow, fireRateGrow) {
+        this.damage += damageGrow
+        this.fireRate -= fireRateGrow
+        if (this.fireRate <= 1) {
+            this.fireRate = 1
         }
     }
 }

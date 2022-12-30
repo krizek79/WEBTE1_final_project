@@ -7,8 +7,6 @@ class Bullet {
         this.x = x
         this.y = y
         this.ya = 5
-        this.fireRate = 30
-        this.damage = 1
     }
 
     init() {
@@ -53,7 +51,7 @@ class Bullet {
                 && this.y <= enemies[i].y + enemies[i].image.height * enemies[i].scale
             ) {
                 hitDetected = true
-                enemies[i].healthPoints -= this.damage
+                enemies[i].healthPoints -= this.spaceShip.damage
             }
         }
         return hitDetected

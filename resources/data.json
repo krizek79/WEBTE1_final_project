@@ -7,7 +7,7 @@
   },
   {
     "id": 2,
-    "numberOfEnemies": 30,
+    "numberOfEnemies": 32,
     "numberOfWaves": 4,
     "enemyHp": 5
   },
