@@ -15,12 +15,46 @@
     </div>
     <div id="gameStart" style="display: block;">
         <a href="#" onclick="startGame()">Start Game</a>
-        <a href="#">Manual</a>
+        <a href="#" onclick="openManual()">Manual</a>
         <a href="#">Credits</a>
     </div>
     <div id="gameOver" style="display: none;">
         <h1>Game Over</h1>
         <a href="#" onclick="showMenu()">Back to menu</a>
+    </div>
+    <div id="manual" style="display: none;">
+        <h1>SpaceMonkeys Defenders</h1>
+        <h2>Game Story</h2>
+        <button onclick="printManual()">Print this page</button>
+        <a href="#" class="closeBtn" onclick="closeManual()">&times;</a>
+        <p>
+            SpaceMonkeys Defenders is arcade style game, which goal is to destroy all enemy waves of cruel monkeys and their rabid dog mounts from the planet of the apes.
+            Who came to settle our land for our tastiest bananas. You play as the brave captain Berki, who is the only hope of the planet earth. <strong>
+            So take your ship and defeat all the mischievous monkeys !!!</strong>
+        </p>
+        <h2>Game Manual</h2>
+        <div class="gameActions">
+            <div class="gameMovement">
+            <p>
+                Each level increases the number of monkeys and also their health.
+            </p>
+            <p>
+                You get a stronger weapon every level
+            </p>
+            <p>
+                Ship movement: mouse, drag and drop
+            </p>
+            <p>
+                Ship shooting: automatically when you grap ship
+            </p>
+            </div>
+            <div class="gameDisplay">
+                <p class="green">green: your ship</p>
+                <p class="red">red: enemmies</p>
+                <p class="blue">blue: pause / current level number / number of enemies in current level</p>
+            </div>
+        </div>
+        <img src="../resources/images/gameManual.png" alt="" width="400px">
     </div>
     <script src="modules/Game.js"></script>
     <script src="modules/SpaceShip.js"></script>
