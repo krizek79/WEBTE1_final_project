@@ -1,3 +1,7 @@
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+}
+
 let game = null
 
 async function fetchData() {
@@ -36,4 +40,14 @@ function gameOver(){
     startDiv.style.display = "none"
     gameCanvas.style.display = "none"
     gameOver.style.display = "block"
+}
+
+function showMenu() {
+    game = null
+    let startDiv = document.getElementById("gameStart")
+    let gameOver = document.getElementById("gameOver")
+    let gameCanvas = document.getElementById("gameCanvas")
+    startDiv.style.display = "block"
+    gameCanvas.style.display = "none"
+    gameOver.style.display = "none"
 }
