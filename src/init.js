@@ -52,17 +52,17 @@ function showMenu() {
     gameOver.style.display = "none"
 }
 
-function openManual(){
+function openManual() {
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "block"
 }
 
-function closeManual(){
+function closeManual() {
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "none"
 }
 
-function printManual(){
+function printManual() {
     document.getElementById("manual");
     let divContents = document.getElementById("manual").innerHTML
     let a = window.open('', '', 'height=500, width=500')
