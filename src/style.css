@@ -39,6 +39,7 @@ body {
     width: 200px;
     text-align: center;
 }
+
 #gameStart a, #gameOver a {
     border:3px solid #7f7;
     color: #7f7;
@@ -50,47 +51,57 @@ body {
     font-size: 20px;
     display: inline-block;
 }
-#gameStart a:hover, #gameOver a:hover{
+
+#gameStart a:hover, #gameOver a:hover {
     background-color: #7f7;
     color: #fff;
 }
-h1{
+
+h1 {
     color: red;
     font-size: 35px;
-
 }
-h2{
+
+h2 {
     margin: 0;
 }
-#manual img{
+
+#manual img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
+
 .gameActions {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
+
 .gameMovement {
     display: inline-block;
     margin-left: 10%;
 }
-.gameDisplay{
+
+.gameDisplay {
     display: inline-block;
     margin-left: 10%;
 }
-.green{
+
+.green {
     color: #7f7;
 }
-.red{
+
+.red {
     color: red;
 }
-.blue{
+
+.blue {
     color: blue;
 }
+
 @media (min-width: 996px) {
     #gameStart, #gameOver {
         padding: 20px;
@@ -103,6 +114,7 @@ h2{
         width: 400px;
         text-align: center;
     }
+
     #gameStart a, #gameOver a {
         border:3px solid #7f7;
         color: #7f7;
@@ -114,19 +126,23 @@ h2{
         font-size: 55px;
         display: inline-block;
     }
-    #gameStart a:hover, #gameOver a:hover{
+
+    #gameStart a:hover, #gameOver a:hover {
         background-color: #7f7;
         color: #fff;
     }
-    h1{
+
+    h1 {
         color: red;
         font-size: 35px;
     }
-    h2{
+
+    h2 {
         font-size: 25px;
         text-align: center;
     }
-    #manual{
+
+    #manual {
         position: absolute;
         background: #fff;
         margin-left: 10%;
@@ -134,19 +150,23 @@ h2{
         margin-top: 2%;
         height: 95%;
       }
-      #manual h1{
+
+    #manual h1{
         text-align: center;
-      }
-      #manual p, button{
+    }
+
+    #manual p, button {
         padding: 2px;
         margin-left: 20px;
         margin-right: 20px;
         font-size: 17px;
-      }
-      #manual h1{
+    }
+
+    #manual h1 {
         font-size: 40px;
-      }
-    .closeBtn{
+    }
+
+    .closeBtn {
         text-decoration: none;
         position: absolute;
         top: 0;
@@ -154,7 +174,8 @@ h2{
         font-size: 36px;
         margin-left: 50px;
     }
-    button{
+
+    button {
         text-decoration: none;
         position: absolute;
         bottom: 0;
@@ -162,7 +183,8 @@ h2{
         font-size: 15px;
         margin-left: 10px;
     }
-    #manual img{
+
+    #manual img {
         display: flex;
         margin-left: auto;
         margin-right: auto;
@@ -175,13 +197,14 @@ h2{
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 45%;
+        left: 50%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
         width: 200px;
         text-align: center;
     }
+
     #gameStart a, #gameOver a {
         border:3px solid #7f7;
         color: #7f7;
@@ -193,41 +216,49 @@ h2{
         font-size: 50px;
         display: inline-block;
     }
-    #gameStart a:hover, #gameOver a:hover{
+
+    #gameStart a:hover, #gameOver a:hover {
         background-color: #7f7;
         color: #fff;
     }
-    h1{
+
+    h1 {
         color: red;
         font-size: 35px;
     }
-    h2{
+
+    h2 {
         font-size: 25px;
         text-align: center;
     }
-    #manual{
+
+    #manual {
         position: absolute;
         background: #fff;
         margin-left: 25%;
         margin-right: 25%;
         margin-top: 2%;
         height: 90%;
-      }
-      #manual h1{
+    }
+
+    #manual h1 {
         text-align: center;
-      }
-      #manual p, button{
+    }
+
+    #manual p, button {
         padding: 2px;
         margin-left: 20px;
         margin-right: 20px;
         font-size: 15px;
-      }
-      #manual img{
+    }
+
+    #manual img {
         display: flex;
         margin-left: auto;
         margin-right: auto;
         width: 70%;
     }
+
     .closeBtn {
         text-decoration: none;
         font-size: 25px;
@@ -236,20 +267,24 @@ h2{
         right: 25px;
         margin-left: 50px;
     }
+
     button {
         float: right;
     }
+
     .gameActions {
         display: flex;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
     }
+
     .gameMovement {
         display: inline-block;
         margin-left: 5%;
     }
-    .gameDisplay{
+
+    .gameDisplay {
         display: inline-block;
         margin-left: 5%;
     }
@@ -266,6 +301,7 @@ h2{
         width: 400px;
         text-align: center;
     }
+
     #gameStart a, #gameOver a {
         border:3px solid #7f7;
         color: #7f7;
@@ -277,40 +313,48 @@ h2{
         font-size: 55px;
         display: inline-block;
     }
-    #gameStart a:hover, #gameOver a:hover{
+
+    #gameStart a:hover, #gameOver a:hover {
         background-color: #7f7;
         color: #fff;
     }
-    h1{
+
+    h1 {
         color: red;
         font-size: 35px;
     }
-    h2{
+
+    h2 {
         font-size: 30px;
         text-align: center;
         margin: 0;
         padding: 0;
     }
-    #manual{
+
+    #manual {
         position: absolute;
         background: #fff;
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 2%;
         height: 100%;
-      }
-      #manual h1{
+    }
+
+    #manual h1 {
         text-align: center;
-      }
-      #manual p, button{
+    }
+
+    #manual p, button {
         padding: 2px;
         margin-left: 20px;
         margin-right: 20px;
         font-size: 25px;
-      }
-      #manual h1{
+    }
+
+    #manual h1 {
         font-size: 40px;
-      }
+    }
+
     .closeBtn {
         text-decoration: none;
         position: absolute;
@@ -319,24 +363,28 @@ h2{
         font-size: 36px;
         margin-left: 50px;
     }
-    #manual img{
+
+    #manual img {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
     }
+
     .gameActions {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
     }
+
     .gameMovement {
         display: inline-block;
         margin-left: 5%;
     }
-    .gameDisplay{
+
+    .gameDisplay {
         display: inline-block;
         margin-left: 5%;
     }
-  }
+}
