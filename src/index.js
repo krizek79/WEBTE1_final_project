@@ -67,7 +67,7 @@ function printManual() {
     let divContents = document.getElementById("manual").innerHTML
     let a = window.open('', '', 'height=500, width=500')
     a.document.write('<html lang="en">')
-    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender Ultra Luxury first edition pimpilimpi TopG<br>')
+    a.document.write('<body > <h1>Manual for Defender<br>')
     a.document.write(divContents)
     a.document.write('</body></html>')
     a.document.close()
