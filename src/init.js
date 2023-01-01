@@ -45,13 +45,24 @@ function closeManual(){
     manualDiv.style.display = "none";
 }
 function printManual(){
-    let manualDiv = document.getElementById("manual");
-    var divContents = document.getElementById("manual").innerHTML;
+    let manualDiv = document.getElementById("gameActions");
+    var divContents = document.getElementById("manualPrint").innerHTML;
     var a = window.open('', '', 'height=500, width=500');
     a.document.write('<html>');
-    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender Ultra Luxury first edition pimpilimpi TopG<br>');
+    a.document.write('<head>');
+    a.document.write('<link rel="stylesheet" href="style.css">');
+    a.document.write('</head>');
+    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender: <br>');
     a.document.write(divContents);
     a.document.write('</body></html>');
     a.document.close();
     a.print();
+}
+function openCredits(){
+    let manualDiv = document.getElementById("credits");
+    manualDiv.style.display = "block";
+}
+function closeCredits(){
+    let manualDiv = document.getElementById("credits");
+    manualDiv.style.display = "none";
 }

@@ -91,12 +91,45 @@ h2{
 .blue{
     color: blue;
 }
+#manual h1{
+    font-size: 40px;
+}
+#credits{
+    position: absolute;
+    background: #fff;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    height: 95%;
+    width: 50%;
+  }
+#credits h1{
+    text-align: center;
+}
+#credits p, button, h3{
+    text-align: center;
+    padding: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 17px;
+    margin-top: 0;
+}
+#credits h3{
+    margin-bottom: 0;
+}
+#credits img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
 @media (min-width: 996px) {
     #gameStart, #gameOver { 
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 41%;
+        left: 43%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -111,7 +144,7 @@ h2{
         cursor: pointer;
         width: 100%;
         text-align: center;
-        font-size: 55px;
+        font-size: 38px;
         display: inline-block;
     }
     #gameStart a:hover, #gameOver a:hover{
@@ -177,7 +210,7 @@ h2{
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 45%;
+        left: 46%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -256,6 +289,12 @@ h2{
         display: inline-block;
         margin-left: 5%;
     }
+    #credits img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
 }
 @media (max-width: 996px) {
     #gameStart, #gameOver {
@@ -300,7 +339,7 @@ h2{
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 2%;
-        height: 100%;
+        height: 90%;
       }
       #manual h1{
         text-align: center;
@@ -342,5 +381,33 @@ h2{
     .gameDisplay{
         display: inline-block;
         margin-left: 5%;
+    }
+    #credits img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #credits{
+        position: absolute;
+        background: #fff;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2%;
+        height: 60%;
+        width: 70%;
+        margin-top: 30%;
+      }
+    #credits h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    #credits p, button, h3{
+        text-align: center;
+        padding: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 30px;
+        margin-top: 0;
     }
   }

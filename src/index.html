@@ -16,7 +16,7 @@
     <div id="gameStart" style="display: block;">
         <a href="#" onclick="startGame()">Start Game</a>
         <a href="#" onclick="openManual()">Manual</a>
-        <a href="#">Credits</a>
+        <a href="#" onclick="openCredits()">Credits</a>
     </div>
     <div id="gameOver" style="display: none;">
         <h1>Game Over</h1>
@@ -33,28 +33,46 @@
             So take your ship and defeat all the mischievous monkeys !!!</strong>
         </p>
         <h2>Game Manual</h2>
-        <div class="gameActions">
-            <div class="gameMovement">
-            <p>
-                Each level increases the number of monkeys and also their health.
-            </p>
-            <p>
-                You get a stronger weapon every level
-            </p>
-            <p>
-                Ship movement: mouse, drag and drop
-            </p>
-            <p>
-                Ship shooting: automatically when you grap ship
-            </p>
+        <div id="manualPrint">
+            <div class="gameActions">
+                <div class="gameMovement">
+                <p>
+                    Each level increases the number of monkeys and also their health.
+                </p>
+                <p>
+                    You get a stronger weapon every level
+                </p>
+                <p>
+                    Ship movement: mouse, drag and drop
+                </p>
+                <p>
+                    Ship shooting: automatically when you grap ship
+                </p>
+                </div>
+                <div class="gameDisplay">
+                    <p class="green">green: your ship</p>
+                    <p class="red">red: enemmies</p>
+                    <p class="blue">blue: pause / current level number / number of enemies in current level</p>
+                </div>
             </div>
-            <div class="gameDisplay">
-                <p class="green">green: your ship</p>
-                <p class="red">red: enemmies</p>
-                <p class="blue">blue: pause / current level number / number of enemies in current level</p>
-            </div>
+            <img src="../resources/images/gameManual.png" alt="" width="400px">
         </div>
-        <img src="../resources/images/gameManual.png" alt="" width="400px">
+    </div>
+    <div id="credits" style="display: none;">
+        <h1>SpaceMonkeys Defenders</h1>
+        <a href="#" class="closeBtn" onclick="closeCredits()">&times;</a>
+        <h3>PRAGRAMMED BY</h3>
+        <p>Matek Križan & Branislav Benko</p>
+        <h3>GRAPHICS</h3>
+        <p>Matej Križan</p>
+        <h3>DESIGN</h3>
+        <p>Branislav Benko</p>
+        <h3>TESTING BY</h3>
+        <p>Matek Križan & Branislav Benko</p>
+        
+        <div id="manualPrint">
+            <img src="../resources/images/credits.png" alt="" width="200px">
+        </div>
     </div>
     <script src="modules/Game.js"></script>
     <script src="modules/SpaceShip.js"></script>
