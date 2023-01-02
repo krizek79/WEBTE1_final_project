@@ -32,7 +32,7 @@ async function startGame() {
     game.startGameLoop()
 }
 
-function gameOver(){
+function gameOver() {
     game = null
     let startDiv = document.getElementById("gameStart")
     let gameOver = document.getElementById("gameOver")
@@ -63,13 +63,26 @@ function closeManual() {
 }
 
 function printManual() {
-    document.getElementById("manual");
-    let divContents = document.getElementById("manual").innerHTML
+    document.getElementById("gameActions");
+    let divContents = document.getElementById("manualPrint").innerHTML
     let a = window.open('', '', 'height=500, width=500')
     a.document.write('<html lang="en">')
+    a.document.write('<head>><title>Manual</title></head>')
+    a.document.write('<link rel="stylesheet" href="style.css">')
+    a.document.write('</head>')
     a.document.write('<body > <h1>Manual for Defender<br>')
     a.document.write(divContents)
     a.document.write('</body></html>')
     a.document.close()
     a.print()
+}
+
+function openCredits() {
+    let creditsDiv = document.getElementById("credits")
+    creditsDiv.style.display = "block"
+}
+
+function closeCredits() {
+    let creditsDiv = document.getElementById("credits")
+    creditsDiv.style.display = "none"
 }

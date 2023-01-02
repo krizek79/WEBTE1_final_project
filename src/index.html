@@ -17,7 +17,7 @@
     <div id="gameStart" style="display: block;">
         <a href="#" onclick="startGame()">Start Game</a>
         <a href="#" onclick="openManual()">Manual</a>
-        <a href="#">Credits</a>
+        <a href="#" onclick="openCredits()">Credits</a>
     </div>
     <div id="gameOver" style="display: none;">
         <h1>Game Over</h1>
@@ -26,7 +26,7 @@
     <div id="manual" style="display: none;">
         <h1>Defender</h1>
         <h2>Game Story</h2>
-        <button onclick="printManual()">Print this page</button>
+        <button class="printButton" onclick="printManual()">Print this page</button>
         <a href="#" class="closeBtn" onclick="closeManual()">&times;</a>
         <p>
             Defender is arcade style game. Your goal is to destroy all enemy waves of cruel monkeys and their rabid dog mounts from the planet of the apes,
@@ -34,28 +34,47 @@
             <br><strong>Take your ship and defeat all the mischievous monkeys !!!</strong>
         </p>
         <h2>Game Manual</h2>
-        <div class="gameActions">
-            <div class="gameMovement">
-            <p>
-                Each level increases the number of monkeys and also their health.
-            </p>
-            <p>
-                You get a stronger weapon every level
-            </p>
-            <p>
-                Ship movement: mouse, drag and drop
-            </p>
-            <p>
-                Ship shooting: automatically when you grap ship
-            </p>
+        <div id="manualPrint">
+            <div class="gameActions">
+                <div class="gameMovement">
+                <p>
+                    Each level increases the number of monkeys and also their health.
+                </p>
+                <p>
+                    You get a stronger weapon every level, you can see actually weapon stats in pause menu.
+                </p>
+                <p class="red">
+                    Game over when one monkey lands on Earth.
+                </p>
+                <p>
+                    Ship movement: mouse, drag and drop
+                </p>
+                <p>
+                    Ship shooting: automatically when you grab the ship
+                </p>
+                </div>
+                <div class="gameDisplay">
+                    <p class="green">green: your ship</p>
+                    <p class="red">red: enemmies</p>
+                    <p class="blue">blue: pause / current level number / number of enemies in current level</p>
+                </div>
             </div>
-            <div class="gameDisplay">
-                <p class="green">green: your ship</p>
-                <p class="red">red: enemmies</p>
-                <p class="blue">blue: pause / current level number / number of enemies in current level</p>
-            </div>
+            <img src="../resources/images/gameManual.png" alt="game display">
         </div>
-        <img src="../resources/images/gameManual.png" alt="gameManual" width="400">
+    </div>
+
+    <div id="credits" style="display: none;">
+        <h1>Defender</h1>
+        <a href="#" class="closeBtn" onclick="closeCredits()">&times;</a>
+        <h3>PRAGRAMMED BY</h3>
+        <p>Matek Križan & Branislav Benko</p>
+        <h3>GRAPHICS</h3>
+        <p>Matej Križan</p>
+        <h3>DESIGN</h3>
+        <p>Branislav Benko</p>
+        <h3>TESTING BY</h3>
+        <p>Matek Križan & Branislav Benko</p>
+        <img src="../resources/images/credits.png" alt="developers team">
     </div>
 
     <script src="modules/Game.js"></script>
