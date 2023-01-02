@@ -49,7 +49,7 @@ function printManual(){
     let divContents = document.getElementById("manualPrint").innerHTML
     let a = window.open('', '', 'height=500, width=500')
     a.document.write('<html lang="en">')
-    a.document.write('<head>><title>Manual</title></head>')
+    a.document.write('<head><title>Manual</title></head>')
     a.document.write('<link rel="stylesheet" href="style.css">')
     a.document.write('</head>')
     a.document.write('<body > <h1>Manual for SpaceMonkeys Defender: <br>')
