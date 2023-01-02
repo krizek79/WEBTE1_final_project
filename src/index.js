@@ -70,7 +70,7 @@ function printManual() {
     a.document.write('<head>><title>Manual</title></head>')
     a.document.write('<link rel="stylesheet" href="style.css">')
     a.document.write('</head>')
-    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender: <br>')
+    a.document.write('<body > <h1>Manual for Defender: <br>')
     a.document.write(divContents)
     a.document.write('</body></html>')
     a.document.close()
@@ -78,11 +78,11 @@ function printManual() {
 }
 
 function openCredits() {
-    let manualDiv = document.getElementById("credits")
-    manualDiv.style.display = "block"
+    let creditsDiv = document.getElementById("credits")
+    creditsDiv.style.display = "block"
 }
 
 function closeCredits() {
-    let manualDiv = document.getElementById("credits")
-    manualDiv.style.display = "none"
+    let creditsDiv = document.getElementById("credits")
+    creditsDiv.style.display = "none"
 }
