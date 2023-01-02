@@ -32,7 +32,7 @@ async function startGame() {
     game.startGameLoop()
 }
 
-function gameOver(){
+function gameOver() {
     game = null
     let startDiv = document.getElementById("gameStart")
     let gameOver = document.getElementById("gameOver")
@@ -55,13 +55,14 @@ function showMenu() {
 function openManual() {
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "block"
+}
 
 function closeManual(){
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "none"
 }
 
-function printManual(){
+function printManual() {
     document.getElementById("gameActions");
     let divContents = document.getElementById("manualPrint").innerHTML
     let a = window.open('', '', 'height=500, width=500')
@@ -76,23 +77,12 @@ function printManual(){
     a.print()
 }
 
-function openCredits(){
+function openCredits() {
     let manualDiv = document.getElementById("credits")
     manualDiv.style.display = "block"
 }
 
-function closeCredits(){
+function closeCredits() {
     let manualDiv = document.getElementById("credits")
     manualDiv.style.display = "none"
-
-function printManual() {
-    document.getElementById("manual");
-    let divContents = document.getElementById("manual").innerHTML
-    let a = window.open('', '', 'height=500, width=500')
-    a.document.write('<html lang="en">')
-    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender Ultra Luxury first edition pimpilimpi TopG<br>')
-    a.document.write(divContents)
-    a.document.write('</body></html>')
-    a.document.close()
-    a.print()
 }
