@@ -59,7 +59,7 @@ body {
 
 h1 {
     color: red;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 h2 {
@@ -102,12 +102,51 @@ h2 {
     color: blue;
 }
 
+#manual h1 {
+    font-size: 40px;
+}
+
+#credits {
+    position: absolute;
+    background: #fff;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    height: 95%;
+    width: 50%;
+}
+
+#credits h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#credits p, button, h3 {
+    text-align: center;
+    padding: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+#credits h3 {
+    margin-bottom: 0;
+}
+
+#credits img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
 @media (min-width: 996px) {
     #gameStart, #gameOver {
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 41%;
+        left: 43%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -123,7 +162,7 @@ h2 {
         cursor: pointer;
         width: 100%;
         text-align: center;
-        font-size: 55px;
+        font-size: 38px;
         display: inline-block;
     }
 
@@ -149,7 +188,7 @@ h2 {
         margin-right: 10%;
         margin-top: 2%;
         height: 95%;
-      }
+    }
 
     #manual h1{
         text-align: center;
@@ -197,7 +236,7 @@ h2 {
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 46%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -261,10 +300,10 @@ h2 {
 
     .closeBtn {
         text-decoration: none;
-        font-size: 25px;
         position: absolute;
         top: 0;
         right: 25px;
+        font-size: 36px;
         margin-left: 50px;
     }
 
@@ -288,13 +327,21 @@ h2 {
         display: inline-block;
         margin-left: 5%;
     }
+
+    #credits img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+    }
 }
+
 @media (max-width: 996px) {
     #gameStart, #gameOver {
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 41%;
+        left: 40%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -336,8 +383,8 @@ h2 {
         background: #fff;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 2%;
-        height: 100%;
+        margin-top: 30%;
+        height: 70%;
     }
 
     #manual h1 {
@@ -368,6 +415,7 @@ h2 {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 15%;
         width: 90%;
     }
 
@@ -386,5 +434,37 @@ h2 {
     .gameDisplay {
         display: inline-block;
         margin-left: 5%;
+    }
+
+    #credits img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15%;
+        width: 60%;
+    }
+
+    #credits {
+        position: absolute;
+        background: #fff;
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 60%;
+        width: 70%;
+        margin-top: 30%;
+    }
+
+    #credits h1 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    #credits p, button, h3 {
+        text-align: center;
+        padding: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 30px;
+        margin-top: 0;
     }
 }

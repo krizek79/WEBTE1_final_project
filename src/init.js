@@ -55,12 +55,35 @@ function showMenu() {
 function openManual() {
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "block"
-}
 
-function closeManual() {
+function closeManual(){
     let manualDiv = document.getElementById("manual")
     manualDiv.style.display = "none"
 }
+
+function printManual(){
+    document.getElementById("gameActions");
+    let divContents = document.getElementById("manualPrint").innerHTML
+    let a = window.open('', '', 'height=500, width=500')
+    a.document.write('<html lang="en">')
+    a.document.write('<head>><title>Manual</title></head>')
+    a.document.write('<link rel="stylesheet" href="style.css">')
+    a.document.write('</head>')
+    a.document.write('<body > <h1>Manual for SpaceMonkeys Defender: <br>')
+    a.document.write(divContents)
+    a.document.write('</body></html>')
+    a.document.close()
+    a.print()
+}
+
+function openCredits(){
+    let manualDiv = document.getElementById("credits")
+    manualDiv.style.display = "block"
+}
+
+function closeCredits(){
+    let manualDiv = document.getElementById("credits")
+    manualDiv.style.display = "none"
 
 function printManual() {
     document.getElementById("manual");
