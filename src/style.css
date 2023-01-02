@@ -93,6 +93,9 @@ h2{
 #manual h1{
     font-size: 40px;
 }
+#manualPrint img{
+    width: 50%;
+}
 #credits{
     position: absolute;
     background: #fff;
