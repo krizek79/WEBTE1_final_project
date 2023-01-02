@@ -56,8 +56,7 @@ body {
 }
 h1{
     color: red;
-    font-size: 35px;
-
+    font-size: 40px;
 }
 h2{
     margin: 0;
@@ -105,6 +104,7 @@ h2{
   }
 #credits h1{
     text-align: center;
+    font-size: 40px;
 }
 #credits p, button, h3{
     text-align: center;
@@ -293,15 +293,15 @@ h2{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 35%;
     }
 }
-@media (max-width: 996px) {
+  @media (max-width: 996px) {
     #gameStart, #gameOver {
         padding: 20px;
         position: fixed;
         top: 50%;
-        left: 41%;
+        left: 40%;
         margin-top: -100px;
         margin-left: -100px;
         height: 200px;
@@ -338,8 +338,8 @@ h2{
         background: #fff;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 2%;
-        height: 90%;
+        margin-top: 30%;
+        height: 70%;
       }
       #manual h1{
         text-align: center;
@@ -366,6 +366,7 @@ h2{
         display: block;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 15%;
         width: 90%;
     }
     .gameActions {
@@ -386,6 +387,7 @@ h2{
         display: block;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 15%;
         width: 60%;
     }
     #credits{
