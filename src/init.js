@@ -46,8 +46,8 @@ function closeManual(){
 }
 function printManual(){
     document.getElementById("gameActions");
-    let divContents = document.getElementById("manualPrint").innerHTML
-    let a = window.open('', '', 'height=500, width=500')
+    let divContents = document.getElementById("manual").innerHTML
+    let a = window.open('', '', 'height=800, width=1000')
     a.document.write('<html lang="en">')
     a.document.write('<head><title>Manual</title></head>')
     a.document.write('<link rel="stylesheet" href="style.css">')
