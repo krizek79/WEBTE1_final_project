@@ -89,11 +89,12 @@ class Game {
                     this.enemiesDefeated = 0
                     this.spaceShip.upgradeShip(1, 2)
                 }
-                if (this.currentLevelIndex <= this.levels.length) {
+                if (this.currentLevelIndex < this.levels.length) {
                     this.currentWave++
                     this.spawnEnemies()
                 } else {
                     gameOver()
+                    return
                 }
             }
 
